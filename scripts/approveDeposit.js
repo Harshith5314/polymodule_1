@@ -7,7 +7,7 @@ const tokenABI = tokenContractJSON.abi;
 
 // Transfer ERC721A tokens to the Ethereum FxChain network
 async function main() {
-  // Set up connections to the Ethereum Goerli network and wallet using Alchemy
+  // Set up connections to the Ethereum sepolia network and wallet using Alchemy
   const networkAddress =
     "https://rpc2.sepolia.org/";
   const privateKey = process.env.PRIVATE_KEY;
@@ -21,7 +21,7 @@ async function main() {
 
   // Get ERC721A contract instance
   const NFT = await ethers.getContractFactory("MyCollectibles");
-  const nft = await NFT.attach("0xac311515a5A7d0c88b4b089c3fb69221A68Ec7EE");
+  const nft = await NFT.attach("0x6893387d50B7225Cb9a179Aaf58AB87296Ad0192");
 
   // Get the FXRoot contract instance (FxChildTunnel contract on Ethereum FxChain)
   const fxRootAddress = "0xF9bc4a80464E48369303196645e876c8C7D972de";
