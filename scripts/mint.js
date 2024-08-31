@@ -8,7 +8,7 @@ async function main() {
   // Get private key from environment variables (Make sure PRIVATE_KEY is defined in the .env file)
   const privateKey = process.env.PRIVATE_KEY;
 
-  // The URL of the network provider (Goerli test network in this case)
+  // The URL of the network provider (Sepolia test network in this case)
   const networkAddress =
     "https://rpc2.sepolia.org/";
 
@@ -19,7 +19,7 @@ async function main() {
   const signer = new ethers.Wallet(privateKey, provider);
 
   // The address of the deployed contract that we want to interact with
-  const contractAddress = "0xac311515a5A7d0c88b4b089c3fb69221A68Ec7EE";
+  const contractAddress = "0x6893387d50B7225Cb9a179Aaf58AB87296Ad0192";
 
   // Get the contract factory for the MyCollectibles contract and attach it to the signer
   const MyCollectibles = await ethers.getContractFactory("MyCollectibles", signer);
